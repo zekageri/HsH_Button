@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HsH Button </title>
+
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="hsButton.css">
+    <script src="hsButton.js"></script>
+</head>
+<body>
+
+    <div class="testContainer">
+        <hs-button id="hsBtnTest">Hs Button</hs-button>
+        <hs-button class="success" id="hsBtnTest1">Hs Button</hs-button>
+        <hs-button class="info" id="hsBtnTest2">Hs Button</hs-button>
+        <hs-button class="warning" id="hsBtnTest3">Hs Button</hs-button>
+        <hs-button class="error" id="hsBtnTest4">Hs Button</hs-button>
+    </div>
+
+    <script>
+
+        let allButton = document.querySelectorAll("hs-button");
+        for (const btn of allButton) {
+
+            btn.on("click",function(id,e){
+                console.log("Clicked on hs button: ", id);
+                btn.toggleLoad();
+            });
+
+            // btn.on("hover",function(type,id,e){
+            //     console.log("Hs-button event: ", type);
+            // });
+
+        }
+
+    </script>
+</body>
+</html>
