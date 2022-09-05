@@ -42,6 +42,13 @@ class hsButton extends HTMLElement {
         });
     }
 
+    setText( text ){
+        this.html(text);
+        if( this.loadingState ){
+            this.setLoad( this.loadingState );
+        }
+    }
+
     setLoad(state = true){
         this.loadingState = state;
         if( state ){
